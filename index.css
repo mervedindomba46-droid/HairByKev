@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 20 12% 5%;
+        --foreground: 36 29% 95%;
+        --card: 22 13% 10%;
+        --card-foreground: 36 29% 95%;
+        --popover: 22 13% 10%;
+        --popover-foreground: 36 29% 95%;
+        --primary: 45 65% 52%;
+        --primary-foreground: 20 12% 5%;
+        --secondary: 24 12% 14%;
+        --secondary-foreground: 36 29% 95%;
+        --muted: 24 12% 14%;
+        --muted-foreground: 30 10% 52%;
+        --accent: 24 12% 16%;
+        --accent-foreground: 36 29% 95%;
+        --destructive: 0 62.8% 45%;
+        --destructive-foreground: 36 29% 95%;
+        --border: 45 40% 90% / 0.08;
+        --input: 45 40% 90% / 0.12;
+        --ring: 45 65% 52%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-espresso text-linen font-sans antialiased;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    ::selection {
+        background: #D4AF37;
+        color: #0D0B0A;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #0D0B0A;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #2B231E;
+        border-radius: 8px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+    }
+}
+
+@layer components {
+    .eyebrow {
+        @apply text-xs font-mono uppercase tracking-[0.28em] text-gold;
+    }
+    .field-input {
+        @apply w-full bg-espresso-3/70 border border-linen/10 rounded-sm px-4 py-3 text-sm text-linen placeholder:text-taupe/70 outline-none transition-colors duration-300 focus:border-gold/60;
+    }
+    .gold-frame {
+        box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 0 120px -40px rgba(212, 175, 55, 0.25);
+    }
+}
+
+.noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.spotlight-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(212, 175, 55, 0.12), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+.spotlight-card:hover::after {
+    opacity: 1;
+}
+
+select.field-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+select.field-input option {
+    background: #161311;
+    color: #F7F3EE;
+}
+
+input[type="date"].field-input::-webkit-calendar-picker-indicator {
+    filter: invert(80%) sepia(40%) saturate(400%) hue-rotate(-10deg);
+    cursor: pointer;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

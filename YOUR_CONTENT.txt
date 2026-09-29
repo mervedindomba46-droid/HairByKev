@@ -1,0 +1,17 @@
+YOUR PHOTOS & DATA — WHAT WAS BAKED IN
+=============================================
+
+Showcase images replaced with your uploads:
+ - knotless-boho -> images/knotless-boho.jpg
+ - waist-length-braids -> images/waist-length.jpg
+ - fulani-shells -> images/fulani.jpg
+ - geometry-scalp -> images/geometry.jpg
+ - crown-updo -> images/crown.jpg
+ - macro-scalp-detail -> images/macro.jpg
+
+Extra gallery uploads included in frontend/public/images/uploads/:
+ - images/uploads/64d9d993-frenchcurls.jpg (FrenchCurls · Knotless)
+ - images/uploads/cb25a258-sew-in.jpg (Sew In · Sew In)
+ - images/uploads/d4f3c86b-goddess-braid.jpg (Goddess braid · Goddess)
+
+Data exports (JSON) in data/: bookings.json, reviews.json, photos.json

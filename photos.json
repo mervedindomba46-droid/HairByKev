@@ -1,0 +1,23 @@
+[
+  {
+    "file": "images/uploads/64d9d993-frenchcurls.jpg",
+    "title": "FrenchCurls",
+    "category": "Knotless",
+    "service": "French Curls",
+    "description": ""
+  },
+  {
+    "file": "images/uploads/cb25a258-sew-in.jpg",
+    "title": "Sew In",
+    "category": "Sew In",
+    "service": "Sew In",
+    "description": ""
+  },
+  {
+    "file": "images/uploads/d4f3c86b-goddess-braid.jpg",
+    "title": "Goddess braid",
+    "category": "Goddess",
+    "service": "Goddess Braids \u2014 Waist Length",
+    "description": ""
+  }
+]
